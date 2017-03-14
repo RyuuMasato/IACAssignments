@@ -1,0 +1,42 @@
+Glossary for Git
+
+Commit:
+
+As a noun:
+A single point in the Git history; the entire history of a project is represented as a set of interrelated commits.
+The word "commit" is often used by Git in the same places other revision control systems use the words "revision" or
+"version". Also used as a short hand for commit object.
+
+As a verb:
+The action of storing a new snapshot of the project’s state in the Git history, by creating a new commit representing
+the current state of the index and advancing HEAD to point at the new commit.
+
+
+Push:
+
+Pushing a branch means to get the branch’s head ref from a remote repository, find out if it is a direct ancestor to the
+branch’s local head ref, and in that case, putting all objects, which are reachable from the local head ref, and which
+are missing from the remote repository, into the remote object database, and updating the remote head ref. If the
+remote head is not an ancestor to the local head, the push fails.
+
+Pull:
+
+Pulling a branch means to fetch it and merge it.
+
+Merge:
+
+As a verb: To bring the contents of another branch (possibly from an external repository) into the current branch. In
+the case where the merged-in branch is from a different repository, this is done by first fetching the remote branch and
+then merging the result into the current branch. This combination of fetch and merge operations is called a pull.
+Merging is performed by an automatic process that identifies changes made since the branches diverged, and then applies
+all those changes together. In cases where changes conflict, manual intervention may be required to complete the merge.
+
+As a noun: unless it is a fast-forward, a successful merge results in the creation of a new commit representing the
+result of the merge, and having as parents the tips of the merged branches. This commit is referred to as a
+"merge commit", or sometimes just a "merge".
+
+
+
+Thomas Erl, 8 Design Principles, SOA
+
+
