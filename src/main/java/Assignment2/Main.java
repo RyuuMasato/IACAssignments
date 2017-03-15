@@ -5,7 +5,7 @@ public class Main {
 //        Marschal Customer to customer_address.xml
         Address address = new Address("Orvelterdek 21", "3432EL", "Nieuwegein");
         Customer customer = new Customer("Jorrit Meulenbeld", "25-08-1990", address);
-        Marschaller marschaller = new Marschaller();
+        MarschallerService marschaller = new MarschallerService();
         marschaller.marschalObject("customer_address", customer);
 
 //        Unmarschal earlier created object from XML

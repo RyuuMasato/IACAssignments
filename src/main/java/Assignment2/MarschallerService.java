@@ -3,14 +3,14 @@ package Assignment2;
 import javax.xml.bind.*;
 import java.io.File;
 
-public class Marschaller {
+public class MarschallerService {
     private File file;
     private JAXBContext jaxbContext;
     private Marshaller marschaller;
     private Unmarshaller unMarschaller;
     private Object object;
 
-    public Marschaller() {}
+    public MarschallerService() {}
 
     private Object getObject() { return this.object; }
 
