@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<customer>
+    <address>
+        <city>Nieuwegein</city>
+        <street>Orvelterdek 21</street>
+        <zip>3432EL</zip>
+    </address>
+    <dateOfBirth>25-08-1990</dateOfBirth>
+    <name>Jorrit Meulenbeld</name>
+</customer>
