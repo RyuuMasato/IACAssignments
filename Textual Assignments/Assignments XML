@@ -1,0 +1,19 @@
+1. Which codes have # and { in ASCII and EBCDIC encoding?
+
+    ASCII       EBCDIC
+#   35 / 23     123 / 7B
+{   123 / 7B    N/A
+
+2. Translate Morse code.
+
+.--.  ---   .--   .     .-.   ..--- -..-  --    .-..
+
+P     O     W     E     R     2     X     M     L
+
+3. Why is there no transformation in ASCII when encoding is not defined?
+The default encoding declaration is ASCII.
+
+4. Diacritic signs are not accepted by default and will be transformed to other characters, how can you solve this?
+Change the encoding to UTF-8 or UTF-16.
+
+
