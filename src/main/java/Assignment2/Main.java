@@ -1,10 +1,15 @@
 package Assignment2;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Main {
     public static void main(String[] args) {
 //        Marschal Customer to customer_address.xml
-        Address address = new Address("Orvelterdek 21", "3432EL", "Nieuwegein");
-        Customer customer = new Customer("Jorrit Meulenbeld", "25-08-1990", address);
+        Map<String, Address> addressMap = new HashMap<String, Address>();
+        Customer customer = new Customer("Jorrit Meulenbeld", "25-08-1990");
+        customer.getAddresses().put("Shipping", new Address("Orvelterdek 21", "3432EL", "Nieuwegein"));
+        customer.getAddresses().put("Billing", new Address("Omloop 48", "3552AZ", "Utrecht"));
         MarschallerService marschaller = new MarschallerService();
         marschaller.marschalObject("customer_address", customer);
 

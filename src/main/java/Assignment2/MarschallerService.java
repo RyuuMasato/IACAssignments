@@ -58,8 +58,8 @@ public class MarschallerService {
         this.setJaxbContext();
         this.setMarschaller();
         try {
-            this.marschaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
-            this.marschaller.marshal(this.getObject(), this.getFile());
+            this.getMarchaller().setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+            this.getMarchaller().marshal(this.getObject(), this.getFile());
             System.out.println(this.getObject());
         } catch (PropertyException e) {
             e.printStackTrace();

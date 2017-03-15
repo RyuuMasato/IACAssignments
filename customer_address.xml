@@ -1,10 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<customer>
-    <address>
-        <city>Nieuwegein</city>
-        <street>Orvelterdek 21</street>
-        <zip>3432EL</zip>
-    </address>
-    <dateOfBirth>25-08-1990</dateOfBirth>
-    <name>Jorrit Meulenbeld</name>
-</customer>
+<ns2:customer xmlns:ns2="http://www.example.com">
+    <ns2:addresses>
+        <entry>
+            <key>Billing</key>
+            <value>
+                <ns2:city>Utrecht</ns2:city>
+                <ns2:street>Omloop 48</ns2:street>
+                <ns2:zip>3552AZ</ns2:zip>
+            </value>
+        </entry>
+        <entry>
+            <key>Shipping</key>
+            <value>
+                <ns2:city>Nieuwegein</ns2:city>
+                <ns2:street>Orvelterdek 21</ns2:street>
+                <ns2:zip>3432EL</ns2:zip>
+            </value>
+        </entry>
+    </ns2:addresses>
+    <ns2:dateOfBirth>25-08-1990</ns2:dateOfBirth>
+    <ns2:name>Jorrit Meulenbeld</ns2:name>
+</ns2:customer>

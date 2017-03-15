@@ -1,22 +1,19 @@
 package Assignment2;
 
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.*;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import java.util.HashMap;
+import java.util.Map;
 
 @XmlRootElement
 public class Customer {
     private String  name,
                     dateOfBirth;
-    private Address address;
+    private Map<String, Address> addresses = new HashMap<String, Address>();
 
     public Customer() {}
 
-    public Customer(Address address) {
-        this.setAddress(address);
-    }
-
-    public Customer(String name, String date, Address address) {
-        this(address);
+    public Customer(String name, String date) {
         this.setName(name);
         this.setDateOfBirth(date);
     }
@@ -31,17 +28,18 @@ public class Customer {
 
     public void setDateOfBirth(String date) { this.dateOfBirth = date; }
 
-    @XmlElement
-    public Address getAddress() { return this.address; }
+//    @XmlJavaTypeAdapter(MapAdapter.class)
+    @XmlElementWrapper(name="addresses")
+    public Map<String, Address> getAddresses() { return this.addresses; }
 
-    public void setAddress(Address address) { this.address = address; }
+    public void setAddresses(Map addresses) { this.addresses = addresses; }
 
     @Override
     public String toString() {
         return "Customer{" +
                 "name='" + name + '\'' +
                 ", dateOfBirth='" + dateOfBirth + '\'' +
-                ", address=" + address +
+                ", address=" + addresses +
                 '}';
     }
 }
