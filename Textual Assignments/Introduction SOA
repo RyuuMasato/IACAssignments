@@ -39,4 +39,23 @@ result of the merge, and having as parents the tips of the merged branches. This
 
 Thomas Erl, 8 Design Principles, SOA
 
+Standardized service contract
+A technical service contract is usually composed of a WSDL document, XML schema(s) (XSD) and policy document(s).
+Consequently, this principle needs to be applied across three areas of a service contract as described below:
+
+Functional expression standardization
+Operations, in- and output message names and corresponding types need to be defined using standardized naming
+conventions. This results in correct interpretation of the contract and increases reusability and interoperability.
+The chance of duplication is reduced.
+
+Data model standardization
+The standardized service contract principle requires standardized data models to prevent unnecessary overhead
+transforming the used data model for different schemas. This adds to the reusability and interoperability and helps to
+create a standardized data representation architecture.
+
+Policy standardization
+Service policies represent terms of use for a service. So, for a service to be reusable, its behavioral requirements
+must be expressed consistently using standardized policy expressions based on industry standard vocabularies.
+
+
 
