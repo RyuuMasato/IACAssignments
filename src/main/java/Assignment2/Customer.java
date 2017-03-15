@@ -28,7 +28,6 @@ public class Customer {
 
     public void setDateOfBirth(String date) { this.dateOfBirth = date; }
 
-//    @XmlJavaTypeAdapter(MapAdapter.class)
     @XmlElementWrapper(name="addresses")
     public Map<String, Address> getAddresses() { return this.addresses; }
 
